@@ -1,9 +1,15 @@
 This package provides Sentry support for the Hiraeth nano Framework.
 
-## Add Handler to .env
+## Setup
+
+In order to register the sentry handler, you'll have to add it to your environment:
 
 ```toml
-	HANDLERS = [
-		"SlashTrace\Sentry\SentryHandler"
-	]
+HANDLERS = [
+	"SlashTrace\Sentry\SentryHandler"
+]
+
+[SENTRY]
+
+	DSN = <your sentry dsn>
 ```

@@ -34,7 +34,7 @@ class BootProvider implements Hiraeth\Provider
 	 */
 	public function __invoke($instance, Hiraeth\Application $app): object
 	{
-		if ($this->getEnvironment('SENTRY.DSN', NULL)) {
+		if ($app->getEnvironment('SENTRY.DSN', NULL)) {
 			$app->setHandler(SentryHandler::class);
 		}
 
